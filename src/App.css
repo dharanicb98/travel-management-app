@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+
+.bg-image {
+  background-image: url("../src/assets/images/travalBg.jpg");
+  height: 100vh;
+  background-size: cover;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 800;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.travel-started {
+  background-image: url("https://www.newdelhiairport.in/media/2038/amazing-international-destinations-for-female-solo-travellers.jpg");
+}
+
+.welcome_title{
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: example 2s linear 0s infinite alternate;
+}
+
+@keyframes example {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }

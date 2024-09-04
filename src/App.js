@@ -4,7 +4,7 @@ import Login from "./pages/login";
 import { isValidToken } from "./utils";
 import { authSuccess, logout } from "./store/reducers/authSlice";
 import { error } from "./store/reducers/loaderSlice";
-// import Cookies from "js-cookie";
+import "./App.css"
 
 function App() {
   const dispatch = useDispatch();

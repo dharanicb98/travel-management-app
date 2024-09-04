@@ -91,15 +91,15 @@ const HomeIcon = ({ className }) => (
   );
 
 
-  const ChevronRightIcon = () => (
-    <div>
+  const ChevronRightIcon = ({ className , onClick , containerStyle = ""}) => (
+    <div onClick={onClick} className = {containerStyle}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-4 h-4"
+        className={`${className ? className : "w-4 h-4"}`}
       >
         <path
           strokeLinecap="round"

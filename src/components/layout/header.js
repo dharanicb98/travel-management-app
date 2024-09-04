@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { authFail } from "../../store/reducers/authSlice";
 import { jwtDecode } from "jwt-decode";
+import logo from "../../assets/images/HynivaLogo.png"
 // import Cookies from "js-cookie";
 
 const Header = () => {
@@ -23,8 +24,8 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white h-[70px] w-[100%] z-[10] flex justify-between items-center px-[20px] fixed top-0 left-0 right-0 shadow-sm">
-      <img src="../../../public/HynivaLogo.png" alt="hyniva logo" />
+    <header className="bg-white h-[70px] w-[100%] z-[10] flex justify-between items-center px-[20px] fixed top-0 left-0 right-0 shadow-sm" style={{ backgroundColor: "rgba(245, 242, 235, 1)" }}>
+      <img src={logo} alt="hyniva logo" className="w-[200px]"/>
       <div className="relative group">
         <img
           src={`${picture}`}

@@ -1,0 +1,397 @@
+{
+  "countries": [
+    {
+      "id": "country_001",
+      "country": "United States",
+      "backgroundImage": "unitedStates.jpg",
+      "places": [
+        {
+          "id": "place_001",
+          "name": "New York City",
+          "backgroundImage": "nyc.jpg",
+          "transportation": [
+            {
+              "id": "transport_001",
+              "type": "Flight"
+            },
+            {
+              "id": "transport_002",
+              "type": "Subway"
+            },
+            {
+              "id": "transport_003",
+              "type": "Taxi"
+            }
+          ],
+          "accommodations": [
+            {
+              "id": "accommodation_001",
+              "type": "Hotel"
+            },
+            {
+              "id": "accommodation_002",
+              "type": "Airbnb"
+            }
+          ],
+          "expenses": [
+            {
+              "id": "expense_001",
+              "type": "Food"
+            },
+            {
+              "id": "expense_002",
+              "type": "Transport"
+            },
+            {
+              "id": "expense_003",
+              "type": "Accommodation"
+            }
+          ],
+          "itinerary": [
+            {
+              "day": 1,
+              "activities": [
+                {
+                  "id": "activity_001",
+                  "time": "10:00 AM",
+                  "description": "Visit Central Park",
+                  "location": "Central Park"
+                },
+                {
+                  "id": "activity_002",
+                  "time": "02:00 PM",
+                  "description": "Explore the Metropolitan Museum of Art",
+                  "location": "Metropolitan Museum of Art"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place_002",
+          "name": "San Francisco",
+          "backgroundImage": "sanFrancisco.jpg",
+          "transportation": [
+            {
+              "id": "transport_004",
+              "type": "Flight"
+            },
+            {
+              "id": "transport_005",
+              "type": "Cable Car"
+            },
+            {
+              "id": "transport_006",
+              "type": "Bus"
+            }
+          ],
+          "accommodations": [
+            {
+              "id": "accommodation_003",
+              "type": "Hotel"
+            },
+            {
+              "id": "accommodation_004",
+              "type": "Motel"
+            }
+          ],
+          "expenses": [
+            {
+              "id": "expense_004",
+              "type": "Food"
+            },
+            {
+              "id": "expense_005",
+              "type": "Transport"
+            },
+            {
+              "id": "expense_006",
+              "type": "Accommodation"
+            }
+          ],
+          "itinerary": [
+            {
+              "day": 1,
+              "activities": [
+                {
+                  "id": "activity_003",
+                  "time": "09:00 AM",
+                  "description": "Visit Golden Gate Bridge",
+                  "location": "Golden Gate Bridge"
+                },
+                {
+                  "id": "activity_004",
+                  "time": "01:00 PM",
+                  "description": "Tour Alcatraz Island",
+                  "location": "Alcatraz Island"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "country_002",
+      "country": "India",
+      "backgroundImage": "india.jpg",
+      "places": [
+        {
+          "id": "place_003",
+          "name": "Delhi",
+          "backgroundImage": "delhi.jpg",
+          "transportation": [
+            {
+              "id": "transport_007",
+              "type": "Flight"
+            },
+            {
+              "id": "transport_008",
+              "type": "Metro"
+            },
+            {
+              "id": "transport_009",
+              "type": "Rickshaw"
+            }
+          ],
+          "accommodations": [
+            {
+              "id": "accommodation_005",
+              "type": "Hotel"
+            },
+            {
+              "id": "accommodation_006",
+              "type": "Guesthouse"
+            }
+          ],
+          "expenses": [
+            {
+              "id": "expense_007",
+              "type": "Food"
+            },
+            {
+              "id": "expense_008",
+              "type": "Transport"
+            },
+            {
+              "id": "expense_009",
+              "type": "Accommodation"
+            }
+          ],
+          "itinerary": [
+            {
+              "day": 1,
+              "activities": [
+                {
+                  "id": "activity_005",
+                  "time": "09:00 AM",
+                  "description": "Visit Red Fort",
+                  "location": "Red Fort"
+                },
+                {
+                  "id": "activity_006",
+                  "time": "12:00 PM",
+                  "description": "Explore Qutub Minar",
+                  "location": "Qutub Minar"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place_004",
+          "name": "Mumbai",
+          "backgroundImage": "mumbai.jpg",
+          "transportation": [
+            {
+              "id": "transport_010",
+              "type": "Flight"
+            },
+            {
+              "id": "transport_011",
+              "type": "Taxi"
+            },
+            {
+              "id": "transport_012",
+              "type": "Local Train"
+            }
+          ],
+          "accommodations": [
+            {
+              "id": "accommodation_007",
+              "type": "Hotel"
+            },
+            {
+              "id": "accommodation_008",
+              "type": "Service Apartment"
+            }
+          ],
+          "expenses": [
+            {
+              "id": "expense_010",
+              "type": "Food"
+            },
+            {
+              "id": "expense_011",
+              "type": "Transport"
+            },
+            {
+              "id": "expense_012",
+              "type": "Accommodation"
+            }
+          ],
+          "itinerary": [
+            {
+              "day": 1,
+              "activities": [
+                {
+                  "id": "activity_007",
+                  "time": "08:00 AM",
+                  "description": "Visit Gateway of India",
+                  "location": "Gateway of India"
+                },
+                {
+                  "id": "activity_008",
+                  "time": "11:00 AM",
+                  "description": "Explore Marine Drive",
+                  "location": "Marine Drive"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "country_003",
+      "country": "France",
+      "backgroundImage": "france.jpg",
+      "places": [
+        {
+          "id": "place_005",
+          "name": "Paris",
+          "backgroundImage": "paris.jpg",
+          "transportation": [
+            {
+              "id": "transport_013",
+              "type": "Flight"
+            },
+            {
+              "id": "transport_014",
+              "type": "Metro"
+            },
+            {
+              "id": "transport_015",
+              "type": "Bicycle"
+            }
+          ],
+          "accommodations": [
+            {
+              "id": "accommodation_009",
+              "type": "Hotel"
+            },
+            {
+              "id": "accommodation_010",
+              "type": "Boutique"
+            }
+          ],
+          "expenses": [
+            {
+              "id": "expense_013",
+              "type": "Food"
+            },
+            {
+              "id": "expense_014",
+              "type": "Transport"
+            },
+            {
+              "id": "expense_015",
+              "type": "Accommodation"
+            }
+          ],
+          "itinerary": [
+            {
+              "day": 1,
+              "activities": [
+                {
+                  "id": "activity_009",
+                  "time": "10:00 AM",
+                  "description": "Visit Eiffel Tower",
+                  "location": "Eiffel Tower"
+                },
+                {
+                  "id": "activity_010",
+                  "time": "01:00 PM",
+                  "description": "Explore Louvre Museum",
+                  "location": "Louvre Museum"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "place_006",
+          "name": "Nice",
+          "backgroundImage": "nice.jpg",
+          "transportation": [
+            {
+              "id": "transport_016",
+              "type": "Flight"
+            },
+            {
+              "id": "transport_017",
+              "type": "Tram"
+            },
+            {
+              "id": "transport_018",
+              "type": "Bus"
+            }
+          ],
+          "accommodations": [
+            {
+              "id": "accommodation_011",
+              "type": "Hotel"
+            },
+            {
+              "id": "accommodation_012",
+              "type": "Resort"
+            }
+          ],
+          "expenses": [
+            {
+              "id": "expense_016",
+              "type": "Food"
+            },
+            {
+              "id": "expense_017",
+              "type": "Transport"
+            },
+            {
+              "id": "expense_018",
+              "type": "Accommodation"
+            }
+          ],
+          "itinerary": [
+            {
+              "day": 1,
+              "activities": [
+                {
+                  "id": "activity_011",
+                  "time": "09:00 AM",
+                  "description": "Walk along the Promenade des Anglais",
+                  "location": "Promenade des Anglais"
+                },
+                {
+                  "id": "activity_012",
+                  "time": "11:00 AM",
+                  "description": "Visit Musée Matisse",
+                  "location": "Musée Matisse"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

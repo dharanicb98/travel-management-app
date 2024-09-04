@@ -9,11 +9,27 @@ import { NavLink, useLocation } from "react-router-dom";
 const LeftBar = () => {
   let location = useLocation();
   const [menuList, setMenuList] = useState([
+    // {
+    //   id: useId(),
+    //   name: "Home",
+    //   imageType: "svg",
+    //   link: "/",
+    //   svg: HomeIcon,
+    //   fontSize: "text-[17px]",
+    // },
+    {
+      id: useId(),
+      name: "Home",
+      imageType: "svg",
+      link: "/",
+      svg: HomeIcon,
+      fontSize: "text-[17px]",
+    },
     {
       id: useId(),
       name: "Dashboard",
       imageType: "svg",
-      link: "/",
+      link: "/dashboard",
       svg: HomeIcon,
       fontSize: "text-[17px]",
     },
@@ -38,7 +54,7 @@ const LeftBar = () => {
   // console.log(location.pathname);
   const listItems = (eachItem) => {
     return (
-      <div className={`flex flex-col justify-center`}>
+      <div className={`flex flex-col justify-center`} >
         <div className="flex cursor-pointer items-center w-full ">
           {eachItem?.children?.length > 0 ? (
             <div

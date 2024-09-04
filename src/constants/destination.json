@@ -1,0 +1,43 @@
+[
+    {
+      "country": "United States",
+      "backgroundImage": "unitedStates.jpg"
+    },
+    {
+      "country": "Canada",
+      "backgroundImage": "canada.jpg"
+    },
+    {
+      "country": "United Kingdom",
+      "backgroundImage": "unitedKingdom.jpg"
+    },
+    {
+      "country": "Australia",
+      "backgroundImage": "australia.jpg"
+    },
+    {
+      "country": "India",
+      "backgroundImage": "india.jpg"
+    },
+    {
+      "country": "Germany",
+      "backgroundImage": "germany.jpeg"
+    },
+    {
+      "country": "France",
+      "backgroundImage": "france.jpg"
+    },
+    {
+      "country": "Japan",
+      "backgroundImage": "japan.jpg"
+    },
+    {
+      "country": "China",
+      "backgroundImage": "china.jpg"
+    },
+    {
+      "country": "Brazil",
+      "backgroundImage": "brazil.jpg"
+    }
+  ]
+  

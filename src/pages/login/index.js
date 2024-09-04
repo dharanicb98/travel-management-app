@@ -5,6 +5,8 @@ import { authSuccess, authFail } from "../../store/reducers/authSlice";
 import { error } from "../../store/reducers/loaderSlice";
 import ErrorPopup from "../../components/popup/errorPopup";
 import Cookies from "js-cookie";
+import logo from '../../assets/images/HynivaLogo.png'
+import { exploreSuccess } from "../../store/reducers/startSlice";
 
 function Login() {
   const errorMessage = useSelector((state) => state.loader.errorMessage);
@@ -21,6 +23,7 @@ function Login() {
         const validateToken = isValidToken(token);
         if (validateToken.data) {
           dispatch(authSuccess());
+          dispatch(exploreSuccess());
         } else {
           dispatch(error(validateToken.error));
           dispatch(authFail());
@@ -40,15 +43,19 @@ function Login() {
     <>
       {errorMessage && <ErrorPopup isOpen={true} errorMessage={errorMessage} />}
       <div
-        style={{ backgroundColor: "rgba(245, 242, 235, 1)" }}
-        className="flex flex-col justify-center items-center h-screen"
+        // style={{ backgroundColor: "rgba(245, 242, 235, 1)" }}
+        className="flex flex-col justify-center items-start h-screen travel-started"
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col md:ml-24">
+        <div>
+          <p className="text-white font-bold text-[40px] m-5 welcome_title">The World is Yours to Explore.   <br/> Sign In and Get Started</p>
+        </div>
           <div className="flex flex-col">
             <img
               width="184"
               alt="Hyniva Logo"
-              src="../../../public/HynivaLogo.svg"
+              // src="../../../public/HynivaLogo.svg"
+              src={logo}
             />
             <div className="mt-4">
               <GoogleSSOButton />
