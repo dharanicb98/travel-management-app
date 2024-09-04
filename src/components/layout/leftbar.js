@@ -107,7 +107,7 @@ const LeftBar = () => {
     );
   };
   return (
-    <div className="flex justify-center items-center ">
+    <div className="flex justify-center items-center">
       <ul className=" flex flex-col w-full">
         {menuList.map((eachItem) => (
           <li key={eachItem.id} className="p-3 first:pt-8 last:pb-20">

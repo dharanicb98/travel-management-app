@@ -49,6 +49,7 @@
           ],
           "itinerary": [
             {
+              "id": "itinerary_001",
               "day": 1,
               "activities": [
                 {
@@ -111,6 +112,7 @@
           ],
           "itinerary": [
             {
+              "id": "itinerary_002",
               "day": 1,
               "activities": [
                 {
@@ -132,7 +134,7 @@
       ]
     },
     {
-      "id": "country_002",
+      "id": "country_005",
       "country": "India",
       "backgroundImage": "india.jpg",
       "places": [
@@ -180,6 +182,7 @@
           ],
           "itinerary": [
             {
+              "id": "itinerary_003",
               "day": 1,
               "activities": [
                 {
@@ -242,6 +245,7 @@
           ],
           "itinerary": [
             {
+              "id": "itinerary_004",
               "day": 1,
               "activities": [
                 {
@@ -263,7 +267,7 @@
       ]
     },
     {
-      "id": "country_003",
+      "id": "country_007",
       "country": "France",
       "backgroundImage": "france.jpg",
       "places": [
@@ -311,6 +315,7 @@
           ],
           "itinerary": [
             {
+              "id": "itinerary_005",
               "day": 1,
               "activities": [
                 {
@@ -321,8 +326,8 @@
                 },
                 {
                   "id": "activity_010",
-                  "time": "01:00 PM",
-                  "description": "Explore Louvre Museum",
+                  "time": "02:00 PM",
+                  "description": "Explore the Louvre Museum",
                   "location": "Louvre Museum"
                 }
               ]
@@ -354,7 +359,7 @@
             },
             {
               "id": "accommodation_012",
-              "type": "Resort"
+              "type": "Hostel"
             }
           ],
           "expenses": [
@@ -373,19 +378,20 @@
           ],
           "itinerary": [
             {
+              "id": "itinerary_006",
               "day": 1,
               "activities": [
                 {
                   "id": "activity_011",
                   "time": "09:00 AM",
-                  "description": "Walk along the Promenade des Anglais",
+                  "description": "Visit Promenade des Anglais",
                   "location": "Promenade des Anglais"
                 },
                 {
                   "id": "activity_012",
-                  "time": "11:00 AM",
-                  "description": "Visit Musée Matisse",
-                  "location": "Musée Matisse"
+                  "time": "12:00 PM",
+                  "description": "Explore Castle Hill",
+                  "location": "Castle Hill"
                 }
               ]
             }

@@ -1,43 +1,52 @@
 [
-    {
-      "country": "United States",
-      "backgroundImage": "unitedStates.jpg"
-    },
-    {
-      "country": "Canada",
-      "backgroundImage": "canada.jpg"
-    },
-    {
-      "country": "United Kingdom",
-      "backgroundImage": "unitedKingdom.jpg"
-    },
-    {
-      "country": "Australia",
-      "backgroundImage": "australia.jpg"
-    },
-    {
-      "country": "India",
-      "backgroundImage": "india.jpg"
-    },
-    {
-      "country": "Germany",
-      "backgroundImage": "germany.jpeg"
-    },
-    {
-      "country": "France",
-      "backgroundImage": "france.jpg"
-    },
-    {
-      "country": "Japan",
-      "backgroundImage": "japan.jpg"
-    },
-    {
-      "country": "China",
-      "backgroundImage": "china.jpg"
-    },
-    {
-      "country": "Brazil",
-      "backgroundImage": "brazil.jpg"
-    }
-  ]
-  
+  {
+    "id": "country_001",
+    "country": "United States",
+    "backgroundImage": "unitedStates.jpg"
+  },
+  {
+    "id": "country_002",
+    "country": "Canada",
+    "backgroundImage": "canada.jpg"
+  },
+  {
+    "id": "country_003",
+    "country": "United Kingdom",
+    "backgroundImage": "unitedKingdom.jpg"
+  },
+  {
+    "id": "country_004",
+    "country": "Australia",
+    "backgroundImage": "australia.jpg"
+  },
+  {
+    "id": "country_005",
+    "country": "India",
+    "backgroundImage": "india.jpg"
+  },
+  {
+    "id": "country_006",
+    "country": "Germany",
+    "backgroundImage": "germany.jpeg"
+  },
+  {
+    "id": "country_007",
+    "country": "France",
+    "backgroundImage": "france.jpg"
+  },
+  {
+    "id": "country_008",
+    "country": "Japan",
+    "backgroundImage": "japan.jpg"
+  },
+  {
+    "id": "country_009",
+    "country": "China",
+    "backgroundImage": "china.jpg"
+  },
+  {
+    "id": "country_010",
+    "country": "Brazil",
+    "backgroundImage": "brazil.jpg"
+  }
+]
