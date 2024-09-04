@@ -111,7 +111,7 @@ const Dashboard = () => {
 
   return (
     <div
-      className="relative flex w-screen h-screen bg-cover"
+      className="relative flex flex-col w-screen h-screen bg-cover"
       style={{
         backgroundImage: `url('https://imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/bg3.jpg')`,
         backgroundSize: "cover",
@@ -154,7 +154,9 @@ const Dashboard = () => {
           containerStyle="self-center"
         />
       </div>
-      <Listing data = {data}/>
+     <div className="flex justify-center items-center mt-64">
+     <Listing data = {data}/>
+     </div>
     </div>
   );
 };
