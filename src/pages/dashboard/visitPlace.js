@@ -2,17 +2,21 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-// Carousel images data
-const images = [
-  { id: 1, url: 'https://via.placeholder.com/800x400?text=Image+1' },
-  { id: 2, url: 'https://via.placeholder.com/800x400?text=Image+2' },
-  { id: 3, url: 'https://via.placeholder.com/800x400?text=Image+3' },
-  { id: 4, url: 'https://via.placeholder.com/800x400?text=Image+4' },
-];
 
 const VisitPlace = () => {
   // Slick slider settings
+  const location = useLocation();
+  const pathname = location.pathname.trim().split("/");
+  const id = pathname[pathname.length - 1]
+  const data = useSelector((state) => state.places.filteredData)?.find((each) => each.id === id)
+  console.log(data , "this is id data")
+
+
+console.log(location , id , "this is locations")
+
   const settings = {
     dots: true,
     infinite: true,
@@ -27,9 +31,9 @@ const VisitPlace = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-center text-2xl font-bold mb-6">Image Carousel</h2>
+      <h2 className="text-center text-2xl font-bold mb-6">{data?.name}</h2>
       <Slider {...settings}>
-        {images.map((image) => (
+        {data?.images?.map((image) => (
           <div key={image.id} className="rounded-lg overflow-hidden shadow-lg">
             <img
               src={image.url}

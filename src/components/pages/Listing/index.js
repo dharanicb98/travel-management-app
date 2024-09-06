@@ -10,7 +10,7 @@ const Listing = ({ handleCloseButton, isOpen }) => {
   console.log(data.length > 0 , data  , "this is Listing")
 
   const handleBookpage = (id) => {
-    navigate(`/places/${id}`, { state: { id: id } })
+    navigate(`/places/${id}`, { state: { "id" : "id" } })
   }
 
   return (
