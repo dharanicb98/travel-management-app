@@ -1,9 +1,13 @@
 import { Link, useNavigate } from "react-router-dom"
 import Dialog from "../../../utils/dialog"
 import Button from "../../button"
+import { useSelector } from "react-redux";
 
-const Listing = ({ data, handleCloseButton, isOpen }) => {
+const Listing = ({ handleCloseButton, isOpen }) => {
   const navigate = useNavigate();
+  const data = useSelector((state) => state.places.filteredData); 
+
+  console.log(data.length > 0 , data  , "this is Listing")
 
   const handleBookpage = (id) => {
     navigate(`/places/${id}`, { state: { id: id } })

@@ -15,8 +15,6 @@ const HomeIcon = ({ className }) => (
     </svg>
   );
   
- 
-  
   const LeftArrowIcon = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +87,6 @@ const HomeIcon = ({ className }) => (
       </svg>
     </div>
   );
-
 
   const ChevronRightIcon = ({ className , onClick , containerStyle = ""}) => (
     <div onClick={onClick} className = {containerStyle}>

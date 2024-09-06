@@ -1,97 +1,17 @@
-// import Listing from "../../components/pages/Listing";
-// import destination from "../../constants/destination.json";
-// import places from "../../constants/places.json"
-// import { ChevronRightIcon } from "../../icons";
-// import { useRef, useState } from "react";
-
-// const Dashboard = () => {
-//   const scrollRef = useRef(null);
-//   const [data , setData] = useState([])
-//   const scroll = (direction) => {
-//     if (direction === "left") {
-//       scrollRef.current.scrollLeft -= 200;
-//     } else {
-//       scrollRef.current.scrollLeft += 200;
-//     }
-//   };
-
-//   const handleFind = (id) => {
-
-//     const countryData = places.countries.find((country) => country.id === id);
-//     if (countryData) {
-//       setData(countryData.places); 
-//       console.log(id, countryData.places, "this filtered items");
-//     }
-//   };
-
-//   return (
-//     <div
-//       className="flex h-screen w-screen overflow-x-auto bg-cover"
-//       style={{
-//         backgroundImage: `url('https://imgak.mmtcdn.com/pwa_v3/pwa_commons_assets/desktop/bg3.jpg')`,
-//         backgroundSize: "cover",
-//       }}
-//     >
-//       <div className="flex justify-center h-[30%] mt-10 bg-fixed">
-//         <ChevronRightIcon
-//           className={
-//             "w-7 h-7 cursor-pointer rotate-180 self-center mr-3 text-white"
-//           }
-//           onClick={() => scroll("left")}
-//           containerStyle="self-center"
-//         />
-//         <div
-//           ref={scrollRef}
-//           className="flex flex-nowrap overflow-x-auto space-x-4 scrollbar-hide w-[60%]"
-//         >
-//           {destination.map((each, index) => {
-//             const backgroundImage = require(`../../assets/images/places/${each.backgroundImage}`);
-//             return (
-//               <div
-//                 key={index}
-//                 style={{
-//                   backgroundImage: `url(${backgroundImage})`,
-//                   backgroundSize: "cover",
-//                 }}
-//                 onClick={()=>handleFind(each.id)}
-//                 className="rounded-md h-[140px] w-[140px] flex-shrink-0 pt-20 bg-cover"
-//               >
-//                 <div className="flex justify-center items-end self-end text-center">
-//                   <h1 className="flex self-end text-white text-[15px] font-roboto font-[800]">
-//                     {each.country}
-//                   </h1>
-//                 </div>
-//               </div>
-//             );
-//           })}
-//         </div>
-//         <ChevronRightIcon
-//           className={"w-7 h-7 cursor-pointer ml-3 text-white"}
-//           onClick={() => scroll("right")}
-//           containerStyle="self-center"
-//         />
-//       </div>
-//       <Listing data={data}/>
-//     </div>
-//   );
-// };
-
-// export default Dashboard;
-
-
-
-
+import { useDispatch, useSelector } from "react-redux";
 import Listing from "../../components/pages/Listing";
-import destination from "../../constants/destination.json";
-import places from "../../constants/places.json"
 import { ChevronRightIcon } from "../../icons";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { filterByCountryId, setInitialData } from "../../store/reducers/placesSlice";
 
 const Dashboard = () => {
   const scrollRef = useRef(null);
-  const [data, setData] = useState([])
   const [popup , setPopUp] = useState(false)
   const [clickId, setClickId] = useState([])
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.places.destination)
+  console.log(data , "this is redux")
+
 
   const scroll = (direction) => {
     if (direction === "left") {
@@ -101,19 +21,16 @@ const Dashboard = () => {
     }
   };
 
-  const handleFind = (id) => {
-    setClickId(id)
-    const countryData = places.countries.find((country) => country.id === id);
-    if (countryData) {
-      setData(countryData.places);
-      console.log(id, countryData.places, "this filtered items");
-    }
-    else{
-      setData([])
-      setPopUp(true)
-      // console.log( data, "else part")
-    }
-  };
+  useEffect(() => {
+    dispatch(setInitialData());
+  }, [dispatch]);
+
+
+const handleFind = (id) => {
+  dispatch(filterByCountryId(id)); 
+  setPopUp(true)
+  setClickId(id)
+};
 
 
   const handleCloseButton = () => {
@@ -138,7 +55,7 @@ const Dashboard = () => {
           ref={scrollRef}
           className="flex flex-nowrap overflow-x-auto space-x-4 scrollbar-hide w-full"
         >
-          {destination.map((each, index) => {
+          {data?.map((each, index) => {
             const backgroundImage = require(`../../assets/images/places/${each.backgroundImage}`);
             return (
               <div
@@ -166,7 +83,7 @@ const Dashboard = () => {
         />
       </div>
       <div className="flex justify-start items-center mt-64">
-        <Listing data={data} handleCloseButton = {handleCloseButton}  isOpen={popup} />
+        <Listing handleCloseButton = {handleCloseButton}  isOpen={popup} />
       </div>
     </div>
   );
