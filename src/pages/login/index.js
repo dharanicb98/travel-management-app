@@ -44,7 +44,7 @@ function Login() {
       {errorMessage && <ErrorPopup isOpen={true} errorMessage={errorMessage} />}
       <div
         // style={{ backgroundColor: "rgba(245, 242, 235, 1)" }}
-        className="flex flex-col justify-center items-start h-screen travel-started"
+        className="flex flex-col justify-center items-start h-screen travel-started bg-cover"
       >
         <div className="flex flex-col md:ml-24">
         <div>

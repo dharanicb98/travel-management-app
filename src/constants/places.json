@@ -9,6 +9,12 @@
           "id": "place_001",
           "name": "New York City",
           "backgroundImage": "nyc.jpg",
+          "tripsPrices": {
+            "flights": 500,
+            "accommodation": 1000,
+            "food": 200,
+            "transport": 100
+          },
           "transportation": [
             {
               "id": "transport_001",
@@ -72,6 +78,12 @@
           "id": "place_002",
           "name": "San Francisco",
           "backgroundImage": "sanFrancisco.jpg",
+          "tripsPrices": {
+            "flights": 450,
+            "accommodation": 900,
+            "food": 180,
+            "transport": 120
+          },
           "transportation": [
             {
               "id": "transport_004",
@@ -142,6 +154,12 @@
           "id": "place_003",
           "name": "Delhi",
           "backgroundImage": "delhi.jpg",
+          "tripsPrices": {
+            "flights": 300,
+            "accommodation": 500,
+            "food": 150,
+            "transport": 50
+          },
           "transportation": [
             {
               "id": "transport_007",
@@ -205,6 +223,12 @@
           "id": "place_004",
           "name": "Mumbai",
           "backgroundImage": "mumbai.jpg",
+          "tripsPrices": {
+            "flights": 350,
+            "accommodation": 700,
+            "food": 170,
+            "transport": 60
+          },
           "transportation": [
             {
               "id": "transport_010",
@@ -275,6 +299,12 @@
           "id": "place_005",
           "name": "Paris",
           "backgroundImage": "paris.jpg",
+          "tripsPrices": {
+            "flights": 600,
+            "accommodation": 1200,
+            "food": 250,
+            "transport": 150
+          },
           "transportation": [
             {
               "id": "transport_013",
@@ -329,69 +359,6 @@
                   "time": "02:00 PM",
                   "description": "Explore the Louvre Museum",
                   "location": "Louvre Museum"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "place_006",
-          "name": "Nice",
-          "backgroundImage": "nice.jpg",
-          "transportation": [
-            {
-              "id": "transport_016",
-              "type": "Flight"
-            },
-            {
-              "id": "transport_017",
-              "type": "Tram"
-            },
-            {
-              "id": "transport_018",
-              "type": "Bus"
-            }
-          ],
-          "accommodations": [
-            {
-              "id": "accommodation_011",
-              "type": "Hotel"
-            },
-            {
-              "id": "accommodation_012",
-              "type": "Hostel"
-            }
-          ],
-          "expenses": [
-            {
-              "id": "expense_016",
-              "type": "Food"
-            },
-            {
-              "id": "expense_017",
-              "type": "Transport"
-            },
-            {
-              "id": "expense_018",
-              "type": "Accommodation"
-            }
-          ],
-          "itinerary": [
-            {
-              "id": "itinerary_006",
-              "day": 1,
-              "activities": [
-                {
-                  "id": "activity_011",
-                  "time": "09:00 AM",
-                  "description": "Visit Promenade des Anglais",
-                  "location": "Promenade des Anglais"
-                },
-                {
-                  "id": "activity_012",
-                  "time": "12:00 PM",
-                  "description": "Explore Castle Hill",
-                  "location": "Castle Hill"
                 }
               ]
             }

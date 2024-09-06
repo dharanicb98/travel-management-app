@@ -16,7 +16,7 @@
 //   };
 
 //   const handleFind = (id) => {
-  
+
 //     const countryData = places.countries.find((country) => country.id === id);
 //     if (countryData) {
 //       setData(countryData.places); 
@@ -89,7 +89,9 @@ import { useRef, useState } from "react";
 
 const Dashboard = () => {
   const scrollRef = useRef(null);
-  const [data , setData] = useState([])
+  const [data, setData] = useState([])
+  const [popup , setPopUp] = useState(false)
+  const [clickId, setClickId] = useState([])
 
   const scroll = (direction) => {
     if (direction === "left") {
@@ -100,14 +102,23 @@ const Dashboard = () => {
   };
 
   const handleFind = (id) => {
-  
+    setClickId(id)
     const countryData = places.countries.find((country) => country.id === id);
     if (countryData) {
-      setData(countryData.places); 
+      setData(countryData.places);
       console.log(id, countryData.places, "this filtered items");
+    }
+    else{
+      setData([])
+      setPopUp(true)
+      // console.log( data, "else part")
     }
   };
 
+
+  const handleCloseButton = () => {
+    setPopUp(false)
+  }
 
   return (
     <div
@@ -136,11 +147,11 @@ const Dashboard = () => {
                   backgroundImage: `url(${backgroundImage})`,
                   backgroundSize: "cover",
                 }}
-                className="rounded-md h-[140px] w-[140px] flex-shrink-0 pt-20 bg-cover"
-                onClick={()=>handleFind(each.id)}
+                className={`rounded-md h-[140px] w-[140px] flex-shrink-0 pt-20 bg-cover ${each.id === clickId && "border-solid border-[3px]"}`}
+                onClick={() => handleFind(each.id)}
               >
                 <div className="flex justify-center items-end self-end text-center">
-                  <h1 className="flex self-end text-white text-[15px] font-roboto font-[800]">
+                  <h1 className="flex self-end text-white text-[15px] font-roboto font-[800] hover:text-[17px]">
                     {each.country}
                   </h1>
                 </div>
@@ -154,9 +165,9 @@ const Dashboard = () => {
           containerStyle="self-center"
         />
       </div>
-     <div className="flex justify-center items-center mt-64">
-     <Listing data = {data}/>
-     </div>
+      <div className="flex justify-start items-center mt-64">
+        <Listing data={data} handleCloseButton = {handleCloseButton}  isOpen={popup} />
+      </div>
     </div>
   );
 };

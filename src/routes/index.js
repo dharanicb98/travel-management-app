@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import Layout from "../components/layout";
 import Dashboard from "../pages/dashboard";
 import Home from "../pages/home";
+import VisitPlace from "../pages/dashboard/visitPlace";
 
 const ProtectedRoutes = () => {
   const errorMessage = useSelector((state) => state.loader.errorMessage);
@@ -20,7 +21,8 @@ const ProtectedRoutes = () => {
       <Layout>
         <Routes>
           <Route path="/" element = {<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/places" element={<Dashboard />} />
+          <Route path="/places/:id" element={<VisitPlace />} />
         </Routes>
       </Layout>
     </>

@@ -19,7 +19,7 @@ const LeftBar = () => {
     // },
     {
       id: useId(),
-      name: "Home",
+      name: "Dashboard",
       imageType: "svg",
       link: "/",
       svg: HomeIcon,
@@ -27,11 +27,21 @@ const LeftBar = () => {
     },
     {
       id: useId(),
-      name: "Dashboard",
+      name: "Visit Places",
       imageType: "svg",
-      link: "/dashboard",
+      link: "/places",
       svg: HomeIcon,
       fontSize: "text-[17px]",
+      // children: [
+      //   {
+      //     id: useId(),
+      //     name: "Checkout places",
+      //     imageType: "svg",
+      //     svg: HomeIcon,
+      //     link: "/places/:id",
+      //     fontSize: "text-[13px]",
+      //   },
+      // ]
     },
   ]);
 
@@ -59,9 +69,8 @@ const LeftBar = () => {
           {eachItem?.children?.length > 0 ? (
             <div
               onClick={() => onClickChevronButton(eachItem)}
-              className={`${eachItem.fontSize}  flex items-center ${
-                eachItem.isActive && "mb-3"
-              }`}
+              className={`${eachItem.fontSize}  flex items-center ${eachItem.isActive && "mb-3"
+                }`}
             >
               <eachItem.svg />
               <p className="pl-1 ">{eachItem.name}</p>
@@ -82,10 +91,9 @@ const LeftBar = () => {
             <NavLink
               to={eachItem.link}
               key={eachItem.name}
-              className={`${
-                location.pathname === eachItem.link &&
+              className={`${location.pathname === eachItem.link &&
                 "text-[#CD264F] font-semibold"
-              } w-full`}
+                } w-full`}
             >
               <div className={`${eachItem.fontSize} flex items-center`}>
                 <eachItem.svg />

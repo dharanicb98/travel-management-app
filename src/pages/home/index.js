@@ -20,7 +20,7 @@ const Home = () => {
             type="outline"
             onClick={() => {
                 dispatch(exploreFail())
-                navigate("/dashboard")
+                navigate("/places")
             }}
             value={"Explore Trips"}
             className={"!bg-[rgba(245, 242, 235, 1)] text-black border-white"}

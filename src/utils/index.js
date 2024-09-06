@@ -46,7 +46,7 @@ export const isValidToken = (token) => {
       // if (domain !== "hyniva.com" && domain !== "holidaykeepers.com") {
       //   throw new Error("Invalid Email");
       // }
-      if (currentTime > expireToken) {
+      if (currentTime < expireToken) {
         //error check
         throw new Error("Token is Expired");
       }
